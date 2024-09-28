@@ -1,0 +1,64 @@
+/* styles.css */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los productos */
+    max-width: 1200px; /* Limita el ancho máximo de la lista */
+    margin: 20px auto; /* Centra la lista y añade margen */
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: calc(12.5% - 20px); /* 8 productos por fila */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .cart {
+    position: relative; /* Cambiado de absolute a relative */
+    margin-top: 20px; /* Espacio entre la lista de productos y el carrito */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 100%; /* Ancho completo */
+    max-width: 600px; /* Limita el ancho máximo del carrito */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .product {
+      width: calc(25% - 20px); /* 4 productos por fila en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      width: calc(50% - 20px); /* 2 productos por fila en móviles */
+    }
+  }
+  
